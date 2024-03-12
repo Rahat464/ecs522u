@@ -1,0 +1,933 @@
+.view-more {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.view-more .overlap-wrapper {
+  background-color: #ffffff;
+  height: 800px;
+  overflow: hidden;
+  width: 360px;
+}
+
+.view-more .overlap {
+  height: 813px;
+  position: relative;
+}
+
+.view-more .background-image {
+  height: 800px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 360px;
+}
+
+.view-more .back-button-icon {
+  height: 28px;
+  left: 15px;
+  object-fit: cover;
+  position: absolute;
+  top: 20px;
+  width: 28px;
+}
+
+.view-more .navbar {
+  background-color: #fffcfc6e;
+  border-radius: 23px;
+  height: 78px;
+  left: 0;
+  position: absolute;
+  top: 735px;
+  width: 360px;
+}
+
+.view-more .map {
+  height: 50px;
+  left: 148px;
+  position: absolute;
+  top: 4px;
+  width: 66px;
+}
+
+.view-more .overlap-group {
+  height: 50px;
+  position: relative;
+  width: 64px;
+}
+
+.view-more .text-wrapper {
+  color: #000000;
+  font-family: "Lexend", Helvetica;
+  font-size: 15px;
+  font-weight: 300;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 38px;
+  white-space: nowrap;
+  width: 64px;
+}
+
+.view-more .map-icon {
+  height: 41px;
+  left: 12px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 40px;
+}
+
+.view-more .compass {
+  height: 50px;
+  left: 256px;
+  position: absolute;
+  top: 4px;
+  width: 77px;
+}
+
+.view-more .div {
+  height: 50px;
+  position: relative;
+  width: 75px;
+}
+
+.view-more .img {
+  height: 41px;
+  left: 17px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 41px;
+}
+
+.view-more .text-wrapper-2 {
+  color: #000000;
+  font-family: "Lexend", Helvetica;
+  font-size: 15px;
+  font-weight: 300;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 38px;
+  white-space: nowrap;
+  width: 75px;
+}
+
+.view-more .home {
+  height: 54px;
+  left: 40px;
+  position: absolute;
+  top: 3px;
+  width: 66px;
+}
+
+.view-more .home-icon {
+  height: 41px;
+  left: 11px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 41px;
+}
+
+.view-more .text-wrapper-3 {
+  color: #000000;
+  font-family: "Lexend", Helvetica;
+  font-size: 15px;
+  font-weight: 300;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 42px;
+  white-space: nowrap;
+  width: 64px;
+}
+
+.view-more .warning-sign {
+  height: 95px;
+  left: 15px;
+  position: absolute;
+  top: 57px;
+  width: 332px;
+}
+
+.view-more .overlap-2 {
+  background-color: #faf452;
+  border-radius: 30px;
+  height: 95px;
+  position: relative;
+  width: 330px;
+}
+
+.view-more .warning-icon {
+  height: 44px;
+  left: 17px;
+  object-fit: cover;
+  position: absolute;
+  top: 27px;
+  width: 50px;
+}
+
+.view-more .WARNING-heavy-rain {
+  color: #000000;
+  font-family: "Lexend", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  left: 71px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 20px;
+  width: 238px;
+}
+
+.view-more .today-s-weather {
+  height: 263px;
+  left: 15px;
+  position: absolute;
+  top: 161px;
+  width: 332px;
+}
+
+.view-more .overlap-3 {
+  background-color: #0a258357;
+  border-radius: 30px;
+  height: 263px;
+  position: relative;
+  width: 330px;
+}
+
+.view-more .overlap-4 {
+  height: 59px;
+  left: 28px;
+  position: absolute;
+  top: 5px;
+  width: 294px;
+}
+
+.view-more .SUNDAY-QUICK {
+  color: #000000;
+  font-family: "Lexend", Helvetica;
+  font-size: 14px;
+  font-weight: 600;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 276px;
+}
+
+.view-more .span {
+  color: #000000;
+  font-family: "Lexend", Helvetica;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.view-more .text-wrapper-4 {
+  font-size: 9px;
+}
+
+.view-more .title {
+  height: 43px;
+  left: 0;
+  position: absolute;
+  top: 16px;
+  width: 294px;
+}
+
+.view-more .storm-icon {
+  height: 43px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 43px;
+}
+
+.view-more .text-wrapper-5 {
+  color: #000000;
+  font-family: "Lexend", Helvetica;
+  font-size: 23px;
+  font-weight: 700;
+  left: 43px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 4px;
+  width: 249px;
+}
+
+.view-more .weather-info {
+  height: 178px;
+  left: 9px;
+  position: absolute;
+  top: 71px;
+  width: 319px;
+}
+
+.view-more .windspeed {
+  height: 29px;
+  left: 0;
+  position: absolute;
+  top: 120px;
+  width: 323px;
+}
+
+.view-more .img-2 {
+  height: 29px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 30px;
+}
+
+.view-more .text-wrapper-6 {
+  color: #000000;
+  font-family: "Lexend", Helvetica;
+  font-size: 22px;
+  font-weight: 400;
+  left: 239px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 80px;
+}
+
+.view-more .text-wrapper-7 {
+  color: #000000;
+  font-family: "Lexend", Helvetica;
+  font-size: 20px;
+  font-weight: 300;
+  left: 85px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  white-space: nowrap;
+  width: 123px;
+}
+
+.view-more .wave-height {
+  height: 29px;
+  left: 0;
+  position: absolute;
+  top: 29px;
+  width: 320px;
+}
+
+.view-more .text-wrapper-8 {
+  color: #000000;
+  font-family: "Lexend", Helvetica;
+  font-size: 22px;
+  font-weight: 400;
+  left: 236px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 80px;
+}
+
+.view-more .text-wrapper-9 {
+  color: #000000;
+  font-family: "Lexend", Helvetica;
+  font-size: 20px;
+  font-weight: 300;
+  left: 80px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 3px;
+  white-space: nowrap;
+  width: 133px;
+}
+
+.view-more .precipitation {
+  height: 29px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 320px;
+}
+
+.view-more .overlap-group-2 {
+  height: 29px;
+  left: 33px;
+  position: absolute;
+  top: 0;
+  width: 283px;
+}
+
+.view-more .text-wrapper-10 {
+  color: #000000;
+  font-family: "Lexend", Helvetica;
+  font-size: 22px;
+  font-weight: 400;
+  left: 203px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 80px;
+}
+
+.view-more .text-wrapper-11 {
+  color: #000000;
+  font-family: "Lexend", Helvetica;
+  font-size: 20px;
+  font-weight: 300;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  white-space: nowrap;
+  width: 235px;
+}
+
+.view-more .wind-direction {
+  height: 29px;
+  left: 0;
+  position: absolute;
+  top: 87px;
+  width: 323px;
+}
+
+.view-more .text-wrapper-12 {
+  color: #000000;
+  font-family: "Lexend", Helvetica;
+  font-size: 20px;
+  font-weight: 300;
+  left: 81px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 4px;
+  white-space: nowrap;
+  width: 146px;
+}
+
+.view-more .wave-direction {
+  height: 29px;
+  left: 0;
+  position: absolute;
+  top: 58px;
+  width: 320px;
+}
+
+.view-more .text-wrapper-13 {
+  color: #000000;
+  font-family: "Lexend", Helvetica;
+  font-size: 20px;
+  font-weight: 300;
+  left: 79px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 3px;
+  white-space: nowrap;
+  width: 151px;
+}
+
+.view-more .visibility {
+  height: 29px;
+  left: 0;
+  position: absolute;
+  top: 149px;
+  width: 320px;
+}
+
+.view-more .text-wrapper-14 {
+  color: #000000;
+  font-family: "Lexend", Helvetica;
+  font-size: 20px;
+  font-weight: 300;
+  left: 85px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 3px;
+  white-space: nowrap;
+  width: 123px;
+}
+
+.view-more .wind-forecast {
+  background-color: #0a258357;
+  border-radius: 30px;
+  height: 129px;
+  left: 15px;
+  position: absolute;
+  top: 579px;
+  width: 330px;
+}
+
+.view-more .overlap-5 {
+  height: 105px;
+  left: 4px;
+  position: relative;
+  top: 3px;
+  width: 310px;
+}
+
+.view-more .times {
+  height: 85px;
+  left: 70px;
+  position: absolute;
+  top: 20px;
+  width: 237px;
+}
+
+.view-more .element {
+  height: 85px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 51px;
+}
+
+.view-more .text-wrapper-15 {
+  color: #010101;
+  font-family: "Lexend", Helvetica;
+  font-size: 15px;
+  font-weight: 300;
+  left: 2px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  white-space: nowrap;
+  width: 39px;
+}
+
+.view-more .text-wrapper-16 {
+  color: #000000;
+  font-family: "Lexend", Helvetica;
+  font-size: 14px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 47px;
+  white-space: nowrap;
+  width: 45px;
+}
+
+.view-more .text-wrapper-17 {
+  color: #000000;
+  font-family: "Lexend", Helvetica;
+  font-size: 14px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 71px;
+  white-space: nowrap;
+  width: 45px;
+}
+
+.view-more .arrow {
+  height: 29px;
+  left: 6px;
+  object-fit: cover;
+  position: absolute;
+  top: 18px;
+  width: 29px;
+}
+
+.view-more .element-2 {
+  height: 85px;
+  left: 64px;
+  position: absolute;
+  top: 0;
+  width: 52px;
+}
+
+.view-more .overlap-group-3 {
+  height: 61px;
+  left: 1px;
+  position: absolute;
+  top: 0;
+  width: 45px;
+}
+
+.view-more .arrow-2 {
+  height: 41px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 12px;
+  width: 41px;
+}
+
+.view-more .element-3 {
+  height: 85px;
+  left: 131px;
+  position: absolute;
+  top: 0;
+  width: 51px;
+}
+
+.view-more .overlap-6 {
+  height: 61px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 45px;
+}
+
+.view-more .arrow-3 {
+  height: 41px;
+  left: 1px;
+  object-fit: cover;
+  position: absolute;
+  top: 12px;
+  width: 41px;
+}
+
+.view-more .element-4 {
+  height: 85px;
+  left: 191px;
+  position: absolute;
+  top: 0;
+  width: 52px;
+}
+
+.view-more .text-wrapper-18 {
+  color: #010101;
+  font-family: "Lexend", Helvetica;
+  font-size: 15px;
+  font-weight: 300;
+  left: 3px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  white-space: nowrap;
+  width: 39px;
+}
+
+.view-more .arrow-4 {
+  height: 29px;
+  left: 8px;
+  object-fit: cover;
+  position: absolute;
+  top: 18px;
+  width: 29px;
+}
+
+.view-more .text-wrapper-19 {
+  color: #000000;
+  font-family: "Lexend", Helvetica;
+  font-size: 14px;
+  font-weight: 700;
+  left: 1px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 47px;
+  white-space: nowrap;
+  width: 45px;
+}
+
+.view-more .titles {
+  height: 102px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 310px;
+}
+
+.view-more .overlap-7 {
+  height: 33px;
+  left: 9px;
+  position: absolute;
+  top: 0;
+  width: 291px;
+}
+
+.view-more .text-wrapper-20 {
+  color: #ffffff;
+  font-family: "Lexend", Helvetica;
+  font-size: 10px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 22px;
+  white-space: nowrap;
+  width: 41px;
+}
+
+.view-more .text-wrapper-21 {
+  color: #000000;
+  font-family: "Lexend", Helvetica;
+  font-size: 14px;
+  font-weight: 600;
+  left: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 276px;
+}
+
+.view-more .text-wrapper-22 {
+  color: #ffffff;
+  font-family: "Lexend", Helvetica;
+  font-size: 10px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 48px;
+  white-space: nowrap;
+  width: 63px;
+}
+
+.view-more .text-wrapper-23 {
+  color: #ffffff;
+  font-family: "Lexend", Helvetica;
+  font-size: 10px;
+  font-weight: 700;
+  left: 4px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 69px;
+  white-space: nowrap;
+  width: 51px;
+}
+
+.view-more .text-wrapper-24 {
+  color: #ffffff;
+  font-family: "Lexend", Helvetica;
+  font-size: 10px;
+  font-weight: 700;
+  left: 4px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 94px;
+  white-space: nowrap;
+  width: 51px;
+}
+
+.view-more .hourly-forecast {
+  height: 128px;
+  left: 15px;
+  position: absolute;
+  top: 438px;
+  width: 332px;
+}
+
+.view-more .overlap-8 {
+  background-color: #0a258357;
+  border-radius: 30px;
+  height: 128px;
+  position: relative;
+  width: 330px;
+}
+
+.view-more .times-2 {
+  height: 87px;
+  left: 22px;
+  position: absolute;
+  top: 25px;
+  width: 296px;
+}
+
+.view-more .element-5 {
+  height: 87px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 49px;
+}
+
+.view-more .temperature {
+  height: 17px;
+  left: 2px;
+  position: absolute;
+  top: 70px;
+  width: 40px;
+}
+
+.view-more .overlap-group-4 {
+  height: 17px;
+  position: relative;
+  width: 38px;
+}
+
+.view-more .rectangle {
+  background-color: #e1c667;
+  border-radius: 7px;
+  height: 16px;
+  left: 0;
+  position: absolute;
+  top: 1px;
+  width: 38px;
+}
+
+.view-more .text-wrapper-25 {
+  color: #000000;
+  font-family: "Lexend", Helvetica;
+  font-size: 14px;
+  font-weight: 200;
+  left: 4px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  white-space: nowrap;
+  width: 34px;
+}
+
+.view-more .storm-icon-2 {
+  height: 30px;
+  left: 7px;
+  object-fit: cover;
+  position: absolute;
+  top: 15px;
+  width: 30px;
+}
+
+.view-more .text-wrapper-26 {
+  color: #ff0101;
+  font-family: "Lexend", Helvetica;
+  font-size: 14px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 47px;
+  white-space: nowrap;
+  width: 45px;
+}
+
+.view-more .element-6 {
+  height: 87px;
+  left: 65px;
+  position: absolute;
+  top: 0;
+  width: 49px;
+}
+
+.view-more .rectangle-2 {
+  background-color: #ebd791;
+  border-radius: 7px;
+  height: 16px;
+  left: 0;
+  position: absolute;
+  top: 1px;
+  width: 38px;
+}
+
+.view-more .storm-icon-3 {
+  height: 30px;
+  left: 6px;
+  object-fit: cover;
+  position: absolute;
+  top: 15px;
+  width: 30px;
+}
+
+.view-more .element-7 {
+  height: 87px;
+  left: 131px;
+  position: absolute;
+  top: 0;
+  width: 49px;
+}
+
+.view-more .element-8 {
+  height: 87px;
+  left: 192px;
+  position: absolute;
+  top: 0;
+  width: 49px;
+}
+
+.view-more .rectangle-3 {
+  background-color: #fbfca8;
+  border-radius: 7px;
+  height: 16px;
+  left: 0;
+  position: absolute;
+  top: 1px;
+  width: 38px;
+}
+
+.view-more .element-9 {
+  height: 87px;
+  left: 251px;
+  position: absolute;
+  top: 0;
+  width: 49px;
+}
+
+.view-more .rectangle-4 {
+  background-color: #fdffb7;
+  border-radius: 7px;
+  height: 16px;
+  left: 0;
+  position: absolute;
+  top: 1px;
+  width: 38px;
+}
+
+.view-more .text-wrapper-27 {
+  color: #000000;
+  font-family: "Lexend", Helvetica;
+  font-size: 14px;
+  font-weight: 600;
+  left: 28px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 3px;
+  width: 276px;
+}

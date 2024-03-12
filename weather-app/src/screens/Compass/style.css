@@ -1,0 +1,181 @@
+.compass {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.compass .overlap-wrapper {
+  background-color: #ffffff;
+  height: 800px;
+  overflow: hidden;
+  width: 360px;
+}
+
+.compass .overlap {
+  height: 809px;
+  position: relative;
+}
+
+.compass .background-image {
+  height: 800px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 360px;
+}
+
+.compass .navbar {
+  background-color: #fffcfc6e;
+  border-radius: 23px;
+  height: 78px;
+  left: 0;
+  position: absolute;
+  top: 731px;
+  width: 360px;
+}
+
+.compass .map {
+  height: 50px;
+  left: 148px;
+  position: absolute;
+  top: 4px;
+  width: 66px;
+}
+
+.compass .overlap-group {
+  height: 50px;
+  position: relative;
+  width: 64px;
+}
+
+.compass .text-wrapper {
+  color: #000000;
+  font-family: "Lexend", Helvetica;
+  font-size: 15px;
+  font-weight: 300;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 38px;
+  white-space: nowrap;
+  width: 64px;
+}
+
+.compass .map-icon {
+  height: 41px;
+  left: 12px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 40px;
+}
+
+.compass .div {
+  height: 67px;
+  left: 256px;
+  position: absolute;
+  top: 4px;
+  width: 77px;
+}
+
+.compass .overlap-group-wrapper {
+  height: 50px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 77px;
+}
+
+.compass .overlap-2 {
+  height: 50px;
+  position: relative;
+  width: 75px;
+}
+
+.compass .img {
+  height: 41px;
+  left: 17px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 41px;
+}
+
+.compass .text-wrapper-2 {
+  color: #000000;
+  font-family: "Lexend", Helvetica;
+  font-size: 15px;
+  font-weight: 300;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 38px;
+  white-space: nowrap;
+  width: 75px;
+}
+
+.compass .shade {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.47) 0%, rgba(0, 0, 0, 0) 100%);
+  height: 65px;
+  left: 2px;
+  mix-blend-mode: overlay;
+  position: absolute;
+  top: 2px;
+  width: 72px;
+}
+
+.compass .home {
+  height: 54px;
+  left: 40px;
+  position: absolute;
+  top: 3px;
+  width: 66px;
+}
+
+.compass .home-icon {
+  height: 41px;
+  left: 11px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 41px;
+}
+
+.compass .text-wrapper-3 {
+  color: #000000;
+  font-family: "Lexend", Helvetica;
+  font-size: 15px;
+  font-weight: 300;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 42px;
+  white-space: nowrap;
+  width: 64px;
+}
+
+.compass .back-button-icon {
+  height: 43px;
+  left: 12px;
+  object-fit: cover;
+  position: absolute;
+  top: 18px;
+  width: 43px;
+}
+
+.compass .image {
+  height: 470px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 165px;
+  width: 360px;
+}
