@@ -6,7 +6,7 @@
 }
 
 .home-screen {
-  background-color: #ffffff;
+  background-color: white;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -14,7 +14,7 @@
 }
 
 .home-screen .overlap-wrapper {
-  background-color: #ffffff;
+  background-color: white;
   height: 800px;
   overflow: hidden;
   width: 360px;
@@ -174,7 +174,7 @@
   width: 328px;
 }
 
-.home-screen .tuesday {
+.home-screen .day-2 {
   height: 45px;
   left: 15px;
   position: absolute;
@@ -241,7 +241,7 @@
   width: 107px;
 }
 
-.home-screen .wednesday {
+.home-screen .day-3 {
   height: 45px;
   left: 15px;
   position: absolute;
@@ -270,7 +270,7 @@
   width: 109px;
 }
 
-.home-screen .thursday {
+.home-screen .day-4 {
   height: 45px;
   left: 17px;
   position: absolute;
@@ -299,7 +299,7 @@
   width: 109px;
 }
 
-.home-screen .monday {
+.home-screen .day-1 {
   height: 45px;
   left: 17px;
   position: absolute;
@@ -385,7 +385,6 @@
 
 .home-screen .text-wrapper-10 {
   color: #000000;
-  font-size: 20px;
   font-weight: 300;
   left: 85px;
   letter-spacing: 0;
@@ -524,8 +523,7 @@
 }
 
 .home-screen .text-wrapper-17 {
-  color: #000000;
-  font-size: 20px;
+  color: black;
   font-weight: 300;
   left: 85px;
   letter-spacing: 0;
@@ -555,7 +553,7 @@
 }
 
 .home-screen .text-wrapper-18 {
-  color: #000000;
+  color: black;
   font-size: 23px;
   font-weight: 700;
   left: 43px;
@@ -613,7 +611,6 @@
 }
 
 .home-screen .input {
-  background-color: #ffffff;
   border: none;
   border-radius: 45px;
   color: #000000;
@@ -626,4 +623,29 @@
   position: relative;
   text-align: center;
   width: 276px;
+}
+
+.home-screen button {
+  border: 3px solid black;
+  border-radius: 45px;
+  color: black;
+  font-size: 34px;
+  font-weight: 400;
+  height: 43px;
+  letter-spacing: 0;
+  line-height: normal;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  width: 43px;
+}
+
+.home-screen .search-icon {
+  height: 60%;
+  width: 60%;
+  left: 8px;
+  top: 6px;
+  object-fit: cover;
+  position: absolute;
 }
