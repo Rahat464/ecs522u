@@ -3,6 +3,8 @@ export const fetchData = async (userInput) => {
     const API_KEY = ''; // Add your own API key here
     const WEATHER_API_URL = ('https://api.openweathermap.org/data/2.5/forecast?lat={1}&lon={2}&appid='+API_KEY);
     const GEOCODING_API_URL = ('https://api.openweathermap.org/geo/1.0/direct?q={1}&limit=1&appid='+API_KEY);
+    const OPENMETEO_API_URL = "https://marine-api.open-meteo.com/v1/marine?" +
+        "latitude={1}&longitude={2}&daily=wave_height_max,wind_wave_direction_dominant"
 
     // Wrap in try-catch block to handle errors
     try{
@@ -23,7 +25,7 @@ export const fetchData = async (userInput) => {
 
         if (!locationData || !lat || !lon) {
             alert('Location data is missing latitude or longitude.');
-            return;
+            // return;
         }
 
         // Get 5-day (forecast5) weather forecast
@@ -33,9 +35,25 @@ export const fetchData = async (userInput) => {
             .replace('{2}', lon)
         );
         const forecast5Response = await fetch(weatherUrl);
+        const forecast5Data = await forecast5Response.json();
 
+        // Get marine weather data from OpenMeteo API
+        // Documentation: https://open-meteo.com/en/docs/marine-weather-api
+        const openMeteoUrl = (OPENMETEO_API_URL
+            .replace('{1}', lat)
+            .replace('{2}', lon)
+        );
+
+        const openMeteoResponse = await fetch(openMeteoUrl);
+        const openMeteoData = await openMeteoResponse.json();
+
+        console.log(openMeteoData);
+
+        if (openMeteoData.error) {
+            alert(openMeteoData.reason);
+        }
         // Return the forecast data to the HomeScreen component to be displayed
-        return await forecast5Response.json();
+        return {forecast5Data, openMeteoData};
 
     } catch (error) {alert(error)}
 };

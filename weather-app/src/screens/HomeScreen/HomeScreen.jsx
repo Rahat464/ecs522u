@@ -6,14 +6,16 @@ import {fetchData} from "./index";
 export const HomeScreen = () => {
   // State variable to store the fetched data
   const [forecast5Data, setForecast5Data] = useState(null);
+  const [openMeteoData, setOpenMeteoData] = useState(null);
 
   // When the user first opens the app, fetch the weather data for a predefined location
   // FetchData returns {forecast5Data, locationData} which are two JSON objects containing the weather forecast and location data
   // Fetch data when the component mounts
   useEffect(() => {
     const getForecastData = async () => {
-      let data = await fetchData("London");
-      setForecast5Data(data); // Store the data in state
+      let data = await fetchData("Dover");
+      setForecast5Data(data.forecast5Data); // Store the data in state
+      setOpenMeteoData(data.openMeteoData);
     };
     getForecastData();
 
@@ -33,7 +35,8 @@ export const HomeScreen = () => {
   async function handleSearch() {
     if (userInput) {
       let data = await fetchData(userInput);
-      setForecast5Data(data);
+      setForecast5Data(data.forecast5Data);
+      setOpenMeteoData(data.openMeteoData);
     }
   }
 
@@ -130,7 +133,7 @@ export const HomeScreen = () => {
                 <img className="img-2" alt="Precipitation icon" src="/img/precipitation-icon.png"/>
                 <div className="overlap-group-3">
                   <div className="text-wrapper-13">
-                    {forecast5Data ? forecast5Data.list[0].pop : "??"}%
+                    {forecast5Data ? forecast5Data.list[0].pop : "?"}%
                   </div>
                   <div className="text-wrapper-14">Precipitation</div>
                 </div>
@@ -138,9 +141,7 @@ export const HomeScreen = () => {
               <div className="wave-height">
                 <img className="img-2" alt="Wave height icon" src="/img/wave-height-icon.png"/>
                 <div className="text-wrapper-11">
-                    {/*TODO Find API for Wave Height*/}
-                    {/*{forecast5Data ? parseFloat((forecast5Data.list[0].main.sea_level / 1000).toFixed(1)) : "??"} kPa*/}
-                    ??
+                    {openMeteoData ? openMeteoData.daily.wave_height_max[0] : "?"} m
                 </div>
                 <div className="text-wrapper-12">Wave Height</div>
               </div>
@@ -148,7 +149,9 @@ export const HomeScreen = () => {
               <div className="wave-direction">
                 <div className="text-wrapper-16">Wave Direction</div>
                 <img className="img-2" alt="Wave direction" src="/img/wave-direction.png"/>
-                <div className="text-wrapper-11">??</div>
+                <div className="text-wrapper-11">
+                    {openMeteoData ? (openMeteoData.daily.wind_wave_direction_dominant[0]).toFixed(1) : "?"}°
+                </div>
               </div>
               <div className="wind-direction">
                 <img className="img-2" alt="Wind direction icon" src="/img/wind-direction-icon.png"/>
@@ -160,13 +163,13 @@ export const HomeScreen = () => {
               <div className="windspeed">
                 <img className="img-2" alt="Windspeed icon" src="/img/windspeed-icon.png"/>
                 <div className="text-wrapper-9">
-                    {forecast5Data ? forecast5Data.list[0].wind.speed : "??"}m/s
+                    {forecast5Data ? (forecast5Data.list[0].wind.speed).toFixed(1) : "?"}m/s
                 </div>
                 <div className="text-wrapper-10">Windspeed</div>
               </div>
               <div className="visibility">
                 <div className="text-wrapper-11">
-                    {forecast5Data ? (forecast5Data.list[0].visibility / 1000) : "??"}km
+                    {forecast5Data ? parseFloat((forecast5Data.list[0].visibility / 1000).toFixed(1)) : "?"}km
                 </div>
                 <div className="text-wrapper-17">Visibility</div>
                 <img className="img-2" alt="Visibility icon" src="/img/visibility-icon.png"/>
