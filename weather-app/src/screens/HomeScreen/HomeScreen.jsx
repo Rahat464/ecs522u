@@ -9,6 +9,8 @@ export const HomeScreen = () => {
   const [openMeteoData, setOpenMeteoData] = useState(null);
   const [weatherbitData, setWeatherbitData] = useState(null);
 
+  const iconUrl = "http://openweathermap.org/img/wn/{icon}@2x.png";
+
   // When the user first opens the app, fetch the weather data for a predefined location
   // FetchData returns {forecast5Data, locationData} which are two JSON objects containing the weather forecast and location data
   // Fetch data when the component mounts
@@ -77,7 +79,8 @@ export const HomeScreen = () => {
           {/*Navbar End*/}
           <div className="more-forecasts">
             <div className="day-1"> {/*Tomorrow*/}
-              <img className="cloudy" alt="Cloudy" src="/img/cloudy-1.png"/>
+              <img className="cloudy" alt="Cloudy"
+                   src={forecast5Data ? iconUrl.replace("{icon}", forecast5Data.list[8].weather[0].icon) : ""}/>
               <div className="text-wrapper-8">{days[(today.getDay() + 1) % 7]}</div>
               <div className="view-more-2">
                 <div className="overlap-group-2">
@@ -87,7 +90,8 @@ export const HomeScreen = () => {
               </div>
             </div>
             <div className="day-2">
-              <img className="cloudy" alt="Cloudy" src="/img/cloudy-1.png"/>
+              <img className="cloudy" alt="Cloudy"
+                   src={forecast5Data ? iconUrl.replace("{icon}", forecast5Data.list[16].weather[0].icon) : ""}/>
               <div className="text-wrapper-4">{days[(today.getDay() + 2) % 7]}</div>
               <div className="view-more">
                 <div className="overlap-group-2">
@@ -97,7 +101,8 @@ export const HomeScreen = () => {
               </div>
             </div>
             <div className="day-3">
-              <img className="cloudy" alt="Cloudy" src="/img/cloudy-1.png"/>
+              <img className="cloudy" alt="Cloudy"
+                   src={forecast5Data ? iconUrl.replace("{icon}", forecast5Data.list[24].weather[0].icon) : ""}/>
               <div className="text-wrapper-6">{days[(today.getDay() + 3) % 7]}</div>
               <div className="overlap-group-wrapper">
                 <div className="overlap-group-2">
@@ -107,7 +112,8 @@ export const HomeScreen = () => {
               </div>
             </div>
             <div className="day-4">
-              <img className="cloudy" alt="Cloudy" src="/img/cloudy-1.png"/>
+              <img className="cloudy" alt="Cloudy"
+                   src={forecast5Data ? iconUrl.replace("{icon}", forecast5Data.list[32].weather[0].icon) : ""}/>
               <div className="text-wrapper-7">{days[(today.getDay() + 4) % 7]}</div>
               <div className="div-wrapper">
                 <div className="overlap-group-2">
@@ -125,8 +131,8 @@ export const HomeScreen = () => {
               </div>
             </div>
             <div className="title">
-              <img className="storm-icon" alt="Storm icon" src="/img/storm-icon.png"/>
-              {/*{forecast5Data.city.name}*/}
+              <img className="storm-icon" alt="Storm icon"
+                   src={forecast5Data ? iconUrl.replace("{icon}", forecast5Data.list[0].weather[0].icon) : ""}/>
               <div className="text-wrapper-18">
                 {forecast5Data ? forecast5Data.city.name : "City Name"}
               </div>
@@ -178,7 +184,6 @@ export const HomeScreen = () => {
               </div>
             </div>
           </div>
-          {/* TODO: Find API for Warnings */}
           <div className="warning-sign">
             <div className="overlap-3">
               <img className="warning-icon" alt="Warning icon" src="/img/warning-icon.png"/>
@@ -190,7 +195,6 @@ export const HomeScreen = () => {
               </p>
             </div>
           </div>
-          {/* UseState is used to store the value of the input field*/}
           <div className="search">
             <input
                 className="input"
@@ -208,10 +212,3 @@ export const HomeScreen = () => {
     </div>
   );
 };
-
-
-/* TODO
-* Display correct weather icons by using the icon code from the API response (see below):
-* https://stackoverflow.com/questions/44177417/how-to-display-openweathermap-weather-icon
-* https://openweathermap.org/weather-conditions
-* */

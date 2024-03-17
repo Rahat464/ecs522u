@@ -65,7 +65,7 @@ export const fetchData = async (userInput) => {
         const weatherbitResponse = await fetch(weatherbitUrl);
         const weatherbitData = await weatherbitResponse.json();
 
-        console.log(weatherbitData);
+        console.log(forecast5Data);
 
         // Return the forecast data to the HomeScreen component to be displayed
         return {forecast5Data, openMeteoData, weatherbitData};
