@@ -1,10 +1,17 @@
 export const fetchData = async (userInput) => {
     // Constants
-    const API_KEY = ''; // Add your own API key here
-    const WEATHER_API_URL = ('https://api.openweathermap.org/data/2.5/forecast?lat={1}&lon={2}&appid='+API_KEY);
-    const GEOCODING_API_URL = ('https://api.openweathermap.org/geo/1.0/direct?q={1}&limit=1&appid='+API_KEY);
+    const API_KEY = {
+        "openweathermap": "",
+        "weatherbit": ""
+    }
+    const WEATHER_API_URL = ('https://api.openweathermap.org/data/2.5/forecast?lat={1}&lon={2}&appid=' +
+        API_KEY["openweathermap"]);
+    const GEOCODING_API_URL = ('https://api.openweathermap.org/geo/1.0/direct?q={1}&limit=1&appid=' +
+        API_KEY["openweathermap"]);
     const OPENMETEO_API_URL = "https://marine-api.open-meteo.com/v1/marine?" +
         "latitude={1}&longitude={2}&daily=wave_height_max,wind_wave_direction_dominant"
+    const WEATHERBIT_API_URL = ('https://api.weatherbit.io/v2.0/alerts?lat={1}&lon={2}&key=' +
+        API_KEY["weatherbit"]);
 
     // Wrap in try-catch block to handle errors
     try{
@@ -47,13 +54,21 @@ export const fetchData = async (userInput) => {
         const openMeteoResponse = await fetch(openMeteoUrl);
         const openMeteoData = await openMeteoResponse.json();
 
-        console.log(openMeteoData);
+        if (openMeteoData.error) alert(openMeteoData.reason)
 
-        if (openMeteoData.error) {
-            alert(openMeteoData.reason);
-        }
+        // Get weather alerts from Weatherbit API
+        // Documentation: https://www.weatherbit.io/api/alerts
+        const weatherbitUrl = (WEATHERBIT_API_URL
+            .replace('{1}', lat)
+            .replace('{2}', lon)
+        );
+        const weatherbitResponse = await fetch(weatherbitUrl);
+        const weatherbitData = await weatherbitResponse.json();
+
+        console.log(weatherbitData);
+
         // Return the forecast data to the HomeScreen component to be displayed
-        return {forecast5Data, openMeteoData};
+        return {forecast5Data, openMeteoData, weatherbitData};
 
     } catch (error) {alert(error)}
 };

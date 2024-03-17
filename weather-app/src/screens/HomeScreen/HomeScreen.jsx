@@ -7,6 +7,7 @@ export const HomeScreen = () => {
   // State variable to store the fetched data
   const [forecast5Data, setForecast5Data] = useState(null);
   const [openMeteoData, setOpenMeteoData] = useState(null);
+  const [weatherbitData, setWeatherbitData] = useState(null);
 
   // When the user first opens the app, fetch the weather data for a predefined location
   // FetchData returns {forecast5Data, locationData} which are two JSON objects containing the weather forecast and location data
@@ -16,6 +17,7 @@ export const HomeScreen = () => {
       let data = await fetchData("Dover");
       setForecast5Data(data.forecast5Data); // Store the data in state
       setOpenMeteoData(data.openMeteoData);
+      setWeatherbitData(data.weatherbitData);
     };
     getForecastData();
 
@@ -37,6 +39,7 @@ export const HomeScreen = () => {
       let data = await fetchData(userInput);
       setForecast5Data(data.forecast5Data);
       setOpenMeteoData(data.openMeteoData);
+      setWeatherbitData(data.weatherbitData);
     }
   }
 
@@ -145,7 +148,6 @@ export const HomeScreen = () => {
                 </div>
                 <div className="text-wrapper-12">Wave Height</div>
               </div>
-              {/*TODO: Find API that provides Wave Direction*/}
               <div className="wave-direction">
                 <div className="text-wrapper-16">Wave Direction</div>
                 <img className="img-2" alt="Wave direction" src="/img/wave-direction.png"/>
@@ -181,9 +183,10 @@ export const HomeScreen = () => {
             <div className="overlap-3">
               <img className="warning-icon" alt="Warning icon" src="/img/warning-icon.png"/>
               <p className="WARNING-heavy-rain">
-                WARNING:
-                <br />
-                Heavy rain may result in some flooding and disruption. Avoid sailing.
+                {weatherbitData && weatherbitData.alerts.length > 0 ?
+                ("1 of " + (weatherbitData.alerts.length).toString() + ": " + weatherbitData.alerts[0].title) :
+                "No warnings"
+                }
               </p>
             </div>
           </div>
