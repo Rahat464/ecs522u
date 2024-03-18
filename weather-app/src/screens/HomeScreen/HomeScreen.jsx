@@ -82,7 +82,7 @@ export const HomeScreen = () => {
               <img className="cloudy" alt="Cloudy"
                    src={forecast5Data ? iconUrl.replace("{icon}", forecast5Data.list[8].weather[0].icon) : ""}/>
               <div className="text-wrapper-8">{days[(today.getDay() + 1) % 7]}</div>
-              <div className="view-more-2">
+              <div className="view-more-2" id-="viewMore2">
                 <div className="overlap-group-2">
                   <div className="rectangle"/>
                   <div className="text-wrapper-5">VIEW MORE</div>
@@ -93,7 +93,7 @@ export const HomeScreen = () => {
               <img className="cloudy" alt="Cloudy"
                    src={forecast5Data ? iconUrl.replace("{icon}", forecast5Data.list[16].weather[0].icon) : ""}/>
               <div className="text-wrapper-4">{days[(today.getDay() + 2) % 7]}</div>
-              <div className="view-more">
+              <div className="view-more" id="viewMore2">
                 <div className="overlap-group-2">
                   <div className="rectangle"/>
                   <div className="text-wrapper-5">VIEW MORE</div>

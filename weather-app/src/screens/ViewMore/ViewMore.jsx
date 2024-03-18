@@ -135,7 +135,7 @@ export const ViewMore = () => {
                   <div className="text-wrapper-15">13:00</div>
                   <div className="temperature">
                     <div className="overlap-group-4">
-                      <div className="rectangle" />
+                      <div className="rectangle" id="rectangle1"/>
                       <div className="text-wrapper-25">8°</div>
                     </div>
                   </div>
