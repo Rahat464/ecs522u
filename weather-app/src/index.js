@@ -13,11 +13,11 @@ const root = ReactDOMClient.createRoot(app);
 
 root.render(
   <Router>
-    <Routes>
-      <Route path="/" element={<HomeScreen />} />
-      <Route path="/viewmore" element={<ViewMore />} />
-      <Route path="/compass" element={<Compass />} />
-      <Route path="/map" element={<Map />} />
-    </Routes>
+      <Routes>
+          <Route path="/" element={<HomeScreen />} />
+          <Route path="/viewmore/:day/:location" element={<ViewMore />} />
+          <Route path="/compass" element={<Compass />} />
+          <Route path="/map" element={<Map />} />
+      </Routes>
   </Router>
 );

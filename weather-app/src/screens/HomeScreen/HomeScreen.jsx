@@ -83,18 +83,11 @@ export const HomeScreen = () => {
               <img className="cloudy" alt="Cloudy"
                    src={forecast5Data ? iconUrl.replace("{icon}", forecast5Data.list[8].weather[0].icon) : ""}/>
               <div className="text-wrapper-8">{days[(today.getDay() + 1) % 7]}</div>
-              <div className="view-more-2" id-="viewMore2">
+              <div className="view-more-2">
                 <div className="overlap-group-2">
                   <div className="rectangle"/>
-                  <Link to={{
-                    pathname: "/viewmore",
-                    state: {
-                        forecast5Data: forecast5Data,
-                        openMeteoData: openMeteoData,
-                        weatherbitData: weatherbitData,
-                        day: 1 // 1 for tomorrow, 2 for day after tomorrow etc...
-                    }
-                  }}>
+                  <Link to={{ pathname: "/viewmore/1/" +
+                    (forecast5Data && forecast5Data.city ? forecast5Data.city.name : "Dover")}}>
                     <div className="text-wrapper-5">VIEW MORE</div>
                   </Link>
                 </div>
@@ -107,15 +100,8 @@ export const HomeScreen = () => {
               <div className="view-more" id="viewMore2">
                 <div className="overlap-group-2">
                   <div className="rectangle"/>
-                  <Link to={{
-                    pathname: "/viewmore",
-                    state: {
-                      forecast5Data: forecast5Data,
-                      openMeteoData: openMeteoData,
-                      weatherbitData: weatherbitData,
-                      day: 1 // 1 for tomorrow, 2 for day after tomorrow etc...
-                    }
-                  }}>
+                  <Link to={{ pathname: "/viewmore/2/" +
+                    (forecast5Data && forecast5Data.city ? forecast5Data.city.name : "Dover")}}>
                     <div className="text-wrapper-5">VIEW MORE</div>
                   </Link>
                 </div>
@@ -128,15 +114,8 @@ export const HomeScreen = () => {
               <div className="overlap-group-wrapper">
                 <div className="overlap-group-2">
                   <div className="rectangle"/>
-                  <Link to={{
-                    pathname: "/viewmore",
-                    state: {
-                      forecast5Data: forecast5Data,
-                      openMeteoData: openMeteoData,
-                      weatherbitData: weatherbitData,
-                      day: 1 // 1 for tomorrow, 2 for day after tomorrow etc...
-                    }
-                  }}>
+                  <Link to={{ pathname: "/viewmore/3/" +
+                        (forecast5Data && forecast5Data.city ? forecast5Data.city.name : "Dover")}}>
                     <div className="text-wrapper-5">VIEW MORE</div>
                   </Link>
                 </div>
@@ -149,15 +128,8 @@ export const HomeScreen = () => {
               <div className="div-wrapper">
                 <div className="overlap-group-2">
                   <div className="rectangle"/>
-                  <Link to={{
-                    pathname: "/viewmore",
-                    state: {
-                      forecast5Data: forecast5Data,
-                      openMeteoData: openMeteoData,
-                      weatherbitData: weatherbitData,
-                      day: 1 // 1 for tomorrow, 2 for day after tomorrow etc...
-                    }
-                  }}>
+                  <Link to={{ pathname: "/viewmore/4/" +
+                        (forecast5Data && forecast5Data.city ? forecast5Data.city.name : "Dover")}}>
                     <div className="text-wrapper-5">VIEW MORE</div>
                   </Link>
                 </div>
@@ -168,15 +140,8 @@ export const HomeScreen = () => {
             <div className="view-more-3">
               <div className="overlap-group-2">
                 <div className="rectangle"/>
-                <Link to={{
-                  pathname: "/viewmore",
-                  state: {
-                    forecast5Data: forecast5Data,
-                    openMeteoData: openMeteoData,
-                    weatherbitData: weatherbitData,
-                    day: 1 // 1 for tomorrow, 2 for day after tomorrow etc...
-                  }
-                }}>
+                <Link to={{ pathname: "/viewmore/0/" +
+                      (forecast5Data && forecast5Data.city ? forecast5Data.city.name : "Dover")}}>
                   <div className="text-wrapper-5">VIEW MORE</div>
                 </Link>
               </div>
@@ -185,7 +150,7 @@ export const HomeScreen = () => {
               <img className="storm-icon" alt="Storm icon"
                    src={forecast5Data ? iconUrl.replace("{icon}", forecast5Data.list[0].weather[0].icon) : ""}/>
               <div className="text-wrapper-18">
-                {forecast5Data ? forecast5Data.city.name : "City Name"}
+                {forecast5Data && forecast5Data.city ? forecast5Data.city.name : "City Name"}
               </div>
             </div>
             <div className="weather-info">
@@ -239,7 +204,7 @@ export const HomeScreen = () => {
             <div className="overlap-3">
               <img className="warning-icon" alt="Warning icon" src="/img/warning-icon.png"/>
               <p className="WARNING-heavy-rain">
-                {weatherbitData && weatherbitData.alerts.length > 0 ?
+                {weatherbitData && weatherbitData.alerts ?
                 ("1 of " + (weatherbitData.alerts.length).toString() + ": " + weatherbitData.alerts[0].title) :
                 "No warnings"
                 }
