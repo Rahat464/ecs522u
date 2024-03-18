@@ -63,7 +63,7 @@ export const HomeScreen = () => {
               </div>
             </div>
             <div className="compass">
-              <div className="div">
+              <div className="div" id="home-div">
                 <img className="img" alt="Compass" src="/img/compass.png" />
                 <div className="text-wrapper-2">Compass</div>
               </div>

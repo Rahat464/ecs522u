@@ -16,7 +16,7 @@ export const ViewMore = () => {
               </div>
             </div>
             <div className="compass">
-              <div className="div">
+              <div className="div" id="viewmore-div">
                 <img className="img" alt="Compass" src="/img/compass.png" />
                 <div className="text-wrapper-2">Compass</div>
               </div>

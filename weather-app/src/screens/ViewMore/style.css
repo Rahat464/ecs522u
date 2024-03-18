@@ -931,3 +931,13 @@
   top: 3px;
   width: 276px;
 }
+
+.map .overlap-group {
+  left: 0px !important;
+  top: 0px !important;
+}
+
+#viewmore-div {
+  left: 0px !important;
+  top: 0px !important;
+}
