@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import {Link} from "react-router-dom";
 import "./style.css";
 import {fetchData} from "./index";
 
@@ -85,7 +86,17 @@ export const HomeScreen = () => {
               <div className="view-more-2" id-="viewMore2">
                 <div className="overlap-group-2">
                   <div className="rectangle"/>
-                  <div className="text-wrapper-5">VIEW MORE</div>
+                  <Link to={{
+                    pathname: "/viewmore",
+                    state: {
+                        forecast5Data: forecast5Data,
+                        openMeteoData: openMeteoData,
+                        weatherbitData: weatherbitData,
+                        day: 1 // 1 for tomorrow, 2 for day after tomorrow etc...
+                    }
+                  }}>
+                    <div className="text-wrapper-5">VIEW MORE</div>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -96,7 +107,17 @@ export const HomeScreen = () => {
               <div className="view-more" id="viewMore2">
                 <div className="overlap-group-2">
                   <div className="rectangle"/>
-                  <div className="text-wrapper-5">VIEW MORE</div>
+                  <Link to={{
+                    pathname: "/viewmore",
+                    state: {
+                      forecast5Data: forecast5Data,
+                      openMeteoData: openMeteoData,
+                      weatherbitData: weatherbitData,
+                      day: 1 // 1 for tomorrow, 2 for day after tomorrow etc...
+                    }
+                  }}>
+                    <div className="text-wrapper-5">VIEW MORE</div>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -107,7 +128,17 @@ export const HomeScreen = () => {
               <div className="overlap-group-wrapper">
                 <div className="overlap-group-2">
                   <div className="rectangle"/>
-                  <div className="text-wrapper-5">VIEW MORE</div>
+                  <Link to={{
+                    pathname: "/viewmore",
+                    state: {
+                      forecast5Data: forecast5Data,
+                      openMeteoData: openMeteoData,
+                      weatherbitData: weatherbitData,
+                      day: 1 // 1 for tomorrow, 2 for day after tomorrow etc...
+                    }
+                  }}>
+                    <div className="text-wrapper-5">VIEW MORE</div>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -118,7 +149,17 @@ export const HomeScreen = () => {
               <div className="div-wrapper">
                 <div className="overlap-group-2">
                   <div className="rectangle"/>
-                  <div className="text-wrapper-5">VIEW MORE</div>
+                  <Link to={{
+                    pathname: "/viewmore",
+                    state: {
+                      forecast5Data: forecast5Data,
+                      openMeteoData: openMeteoData,
+                      weatherbitData: weatherbitData,
+                      day: 1 // 1 for tomorrow, 2 for day after tomorrow etc...
+                    }
+                  }}>
+                    <div className="text-wrapper-5">VIEW MORE</div>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -127,7 +168,17 @@ export const HomeScreen = () => {
             <div className="view-more-3">
               <div className="overlap-group-2">
                 <div className="rectangle"/>
-                <div className="text-wrapper-5">VIEW MORE</div>
+                <Link to={{
+                  pathname: "/viewmore",
+                  state: {
+                    forecast5Data: forecast5Data,
+                    openMeteoData: openMeteoData,
+                    weatherbitData: weatherbitData,
+                    day: 1 // 1 for tomorrow, 2 for day after tomorrow etc...
+                  }
+                }}>
+                  <div className="text-wrapper-5">VIEW MORE</div>
+                </Link>
               </div>
             </div>
             <div className="title">
