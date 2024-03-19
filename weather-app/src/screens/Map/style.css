@@ -1,220 +1,56 @@
-.map {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+/* Main container for the map view */
+.map-page {
+  position: relative;
+  width: 360px; /* Ensure this matches the width of your home screen for consistency */
+  height: 800px;
+  margin: auto;
+  overflow: hidden; /* Prevents content from spilling outside the boundaries */
+}
+
+/* Styles for the Leaflet map to occupy the full container */
+.leaflet-map {
   width: 100%;
+  height: 100%;
 }
 
-.map .div {
-  background-color: #ffffff;
-  height: 800px;
-  overflow: hidden;
-  position: relative;
-  width: 360px;
-}
-
-.map .overlap {
-  height: 1080px;
-  left: -307px;
-  position: absolute;
-  top: -76px;
-  width: 975px;
-}
-
-.map .overlap-group-wrapper {
-  height: 1080px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 975px;
-}
-
-.map .overlap-group {
-  background-position: 50% 50%;
-  background-size: cover;
-  height: 800px;
-  left: 307px;
-  position: relative;
-  top: 76px;
-  width: 360px;
-}
-
-.map .heatmap-layer {
-  height: 800px;
-  left: 0;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  width: 360px;
-}
-
-.map .search {
-  height: 43px;
-  left: 378px;
-  position: absolute;
-  top: 94px;
-  width: 278px;
-}
-
-.map .input {
-  background-color: #ffffff;
-  border: none;
-  border-radius: 45px;
-  color: #000000;
-  font-family: "Lexend", Helvetica;
-  font-size: 34px;
-  font-weight: 400;
-  height: 43px;
-  letter-spacing: 0;
-  line-height: normal;
-  padding: 0;
-  padding-left: 0;
-  position: relative;
-  text-align: center;
-  width: 276px;
-}
-
-.map .navbar {
-  background-color: #fffcfc6e;
-  border-radius: 23px;
+/* Styling for the navigation bar */
+.navbar {
+  display: flex;
+  justify-content: space-around; /* Evenly spaces items within the navbar */
+  align-items: center; /* Vertically centers items */
+  position: fixed; /* Keeps navbar at screen bottom */
+  bottom: 0;
+  width: 360px; /* Ensures consistency with .map-page width */
+  margin: auto; /* Centers navbar horizontally */
   height: 78px;
-  left: 0;
-  position: fixed;
-  top: 735px;
-  width: 360px;
+  background-color: #fffcfc6e; /* Semi-transparent background */
+  border-radius: 23px; /* Rounded corners for styling */
+  z-index: 1000; /* Keeps navbar above other content */
 }
 
-.map .overlap-2 {
-  height: 65px;
-  left: 140px;
+/* Style for each navbar item */
+.navbar-item {
+  margin: 0 10px; /* Provides spacing between navbar items */
+}
+
+/* Style for the back button to avoid overlapping */
+.back-button-icon {
   position: absolute;
-  top: 0;
-  width: 74px;
+  top: 10px;
+  left: 10px;
+  z-index: 1010; /* Ensures the back button is above the navbar */
 }
 
-.map .div-wrapper {
-  height: 50px;
-  left: 8px;
+/* Style for the search bar on the map */
+.search {
   position: absolute;
-  top: 4px;
-  width: 66px;
+  width: 100%; /* Allows the search bar to fill container width */
+  top: 20px; /* Positions the search bar below the top edge */
+  z-index: 1000; /* Ensures search is above the map */
 }
 
-.map .overlap-group-2 {
-  height: 50px;
-  position: relative;
-  width: 64px;
-}
-
-.map .text-wrapper {
-  color: #000000;
-  font-family: "Lexend", Helvetica;
-  font-size: 15px;
-  font-weight: 300;
-  left: 0;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 38px;
-  white-space: nowrap;
-  width: 64px;
-}
-
-.map .map-icon {
-  height: 41px;
-  left: 12px;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  width: 40px;
-}
-
-.map .shade {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.47) 0%, rgba(0, 0, 0, 0) 100%);
-  height: 65px;
-  left: 0;
-  mix-blend-mode: overlay;
-  position: absolute;
-  top: 0;
-  width: 72px;
-}
-
-.map .compass {
-  height: 50px;
-  left: 256px;
-  position: absolute;
-  top: 4px;
-  width: 77px;
-}
-
-.map .overlap-3 {
-  height: 50px;
-  position: relative;
-  width: 75px;
-}
-
-.map .img {
-  height: 41px;
-  left: 17px;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  width: 41px;
-}
-
-.map .text-wrapper-2 {
-  color: #000000;
-  font-family: "Lexend", Helvetica;
-  font-size: 15px;
-  font-weight: 300;
-  left: 0;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 38px;
-  white-space: nowrap;
-  width: 75px;
-}
-
-.map .home {
-  height: 54px;
-  left: 40px;
-  position: absolute;
-  top: 3px;
-  width: 66px;
-}
-
-.map .home-icon {
-  height: 41px;
-  left: 11px;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  width: 41px;
-}
-
-.map .text-wrapper-3 {
-  color: #000000;
-  font-family: "Lexend", Helvetica;
-  font-size: 15px;
-  font-weight: 300;
-  left: 0;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 42px;
-  white-space: nowrap;
-  width: 64px;
-}
-
-.map .back-button-icon {
-  height: 43px;
-  left: 12px;
-  object-fit: cover;
-  position: fixed;
-  top: 18px;
-  width: 43px;
+/* Input field styling within the search bar */
+.input {
+  width: calc(100% - 20px); /* Adjusts for padding on either side */
+  margin: 0 10px; /* Centers input field within the search bar */
 }
