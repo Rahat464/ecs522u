@@ -204,9 +204,9 @@ export const HomeScreen = () => {
             <div className="overlap-3">
               <img className="warning-icon" alt="Warning icon" src="/img/warning-icon.png"/>
               <p className="WARNING-heavy-rain">
-                {weatherbitData && weatherbitData.alerts ?
-                ("1 of " + (weatherbitData.alerts.length).toString() + ": " + weatherbitData.alerts[0].title) :
-                "No warnings"
+                {weatherbitData && weatherbitData.alerts && weatherbitData.alerts[0] ?
+                    ("1 of " + (weatherbitData.alerts.length).toString() + ": " + weatherbitData.alerts[0].title) :
+                    "No warnings"
                 }
               </p>
             </div>
