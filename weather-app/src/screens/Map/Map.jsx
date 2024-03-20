@@ -1,4 +1,4 @@
-// will need to use npm install react-router-dom for live location to work
+// will need to use npm install react-router-dom for live location to work and use npm install leaflet react-leaflet for the map to work
 import React, { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
