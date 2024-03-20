@@ -681,3 +681,8 @@
   left: 0px !important;
   top: 0px !important;
 }
+
+.search button {
+  bottom: 0px;
+  left: 243px;
+}
