@@ -1,13 +1,8 @@
 export const fetchData = async (userInput) => {
     // Constants
     const API_KEY = {
-<<<<<<< HEAD
         "openweathermap": "74ee18ca0b3d0db25a9331a5899b0a85",
         "weatherbit": "af697910398e456a84fa8a5943ba6a7f"
-=======
-        "openweathermap": "!74ee18ca0b3d0db25a9331a5899b0a85",
-        "weatherbit": "!af697910398e456a84fa8a5943ba6a7f"
->>>>>>> b42e7bc2cbcde7026385541540a6b0d98b6c5bb1
     }
     const WEATHER_API_URL = ('https://api.openweathermap.org/data/2.5/forecast?lat={1}&lon={2}&units=metric&appid=' +
         API_KEY["openweathermap"]);
@@ -69,6 +64,8 @@ export const fetchData = async (userInput) => {
         );
         const weatherbitResponse = await fetch(weatherbitUrl);
         const weatherbitData = await weatherbitResponse.json();
+
+        console.log(forecast5Data, openMeteoData, weatherbitData);
 
         // Return the forecast data to the HomeScreen component to be displayed
         return {forecast5Data, openMeteoData, weatherbitData};
