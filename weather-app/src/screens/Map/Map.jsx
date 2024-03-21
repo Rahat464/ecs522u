@@ -3,10 +3,9 @@ import React, { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import "./style.css";
 
-// Configure the icon for the marker
 const markerIcon = new L.Icon({
   iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
   iconUrl: require('leaflet/dist/images/marker-icon.png'),
@@ -25,29 +24,24 @@ function LocationMarker() {
         map.flyTo([latitude, longitude], map.getZoom());
       },
       () => {
-        // Handle location access denied here
         console.log('Location access denied by user.');
-        // You can set a default position or just do nothing
       }
     );
   }, [map]);
 
   return position === null ? null : (
-    <Marker position={position} icon={markerIcon}>
-      {/* Add Popup here if you want */}
-    </Marker>
+    <Marker position={position} icon={markerIcon}></Marker>
   );
 }
 
 export const Map = () => {
-  // Default center if user denies geolocation access
-  const defaultPosition = [51.505, -0.09]; 
+  const defaultPosition = [51.505, -0.09];
 
   return (
     <div className="map-page">
-      <Link to="/" className="back-button">
+      <NavLink to="/" className="back-button">
         <img className="back-button-icon" alt="Back button icon" src="/img/back-button-icon.png" />
-      </Link>
+      </NavLink>
       <MapContainer center={defaultPosition} zoom={13} className="leaflet-map">
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -56,18 +50,18 @@ export const Map = () => {
         <LocationMarker />
       </MapContainer>
       <div className="navbar">
-        <Link to="/" className="navbar-item">
-          <img className="icon home-icon" alt="Home icon" src="/img/home-icon.png" />
+        <NavLink to="/" className="navbar-item" exact activeClassName="active">
+          <img className="icon" alt="Home icon" src="/img/home-icon.png" />
           <div className="label">Home</div>
-        </Link>
-        <Link to="/map" className="navbar-item">
-          <img className="icon map-icon" alt="Map icon" src="/img/map-icon.png" />
+        </NavLink>
+        <NavLink to="/map" className="navbar-item" activeClassName="active">
+          <img className="icon" src="/img/map-icon.png" alt="Map icon" />
           <div className="label">Map</div>
-        </Link>
-        <Link to="/compass" className="navbar-item">
-          <img className="icon compass-icon" alt="Compass" src="/img/compass.png" />
+        </NavLink>
+        <NavLink to="/compass" className="navbar-item" exact activeClassName="active">
+          <img className="icon" alt="Compass" src="/img/compass.png" />
           <div className="label">Compass</div>
-        </Link>
+        </NavLink>
       </div>
     </div>
   );
