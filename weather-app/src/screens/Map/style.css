@@ -1,56 +1,84 @@
-/* Main container for the map view */
-.map-page {
-  position: relative;
-  width: 360px; /* Ensure this matches the width of your home screen for consistency */
-  height: 800px;
-  margin: auto;
-  overflow: hidden; /* Prevents content from spilling outside the boundaries */
+/* Apply a universal box-sizing rule and reset default margins and paddings */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* Styles for the Leaflet map to occupy the full container */
+/* Set a consistent font across the app */
+body {
+  font-family: 'Lexend', sans-serif;
+}
+
+/* Define the main container for the map page */
+.map-page {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 800px;
+  width: 360px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Set up the map container */
 .leaflet-map {
   width: 100%;
-  height: 100%;
+  height: calc(100% - 78px); /* Height adjusted for navbar */
 }
 
-/* Styling for the navigation bar */
+/* Style the navigation bar at the bottom of the map */
 .navbar {
-  display: flex;
-  justify-content: space-around; /* Evenly spaces items within the navbar */
-  align-items: center; /* Vertically centers items */
-  position: fixed; /* Keeps navbar at screen bottom */
-  bottom: 0;
-  width: 360px; /* Ensures consistency with .map-page width */
-  margin: auto; /* Centers navbar horizontally */
+  background-color: #fffcfc6e;
+  border-radius: 23px;
   height: 78px;
-  background-color: #fffcfc6e; /* Semi-transparent background */
-  border-radius: 23px; /* Rounded corners for styling */
-  z-index: 1000; /* Keeps navbar above other content */
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* Style for each navbar item */
+/* Style the navigation items */
 .navbar-item {
-  margin: 0 10px; /* Provides spacing between navbar items */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
 }
 
-/* Style for the back button to avoid overlapping */
+/* Style the icons in the navigation bar */
+.navbar-item .icon {
+  height: 41px;
+  width: 41px;
+}
+
+/* Style the labels under the icons */
+.navbar-item .label {
+  font-size: 15px;
+  font-weight: 300;
+  margin-top: 4px;
+}
+
+/* Highlight the active navigation item */
+.navbar-item.active .icon,
+.navbar-item.active .label {
+  color: #3748de;
+}
+
+/* Position the back button below the map's zoom controls */
 .back-button-icon {
+  height: 43px;
+  width: 43px;
   position: absolute;
-  top: 10px;
+  top: 80px; /* Adjusted to sit below zoom controls */
   left: 10px;
-  z-index: 1010; /* Ensures the back button is above the navbar */
-}
-
-/* Style for the search bar on the map */
-.search {
-  position: absolute;
-  width: 100%; /* Allows the search bar to fill container width */
-  top: 20px; /* Positions the search bar below the top edge */
-  z-index: 1000; /* Ensures search is above the map */
-}
-
-/* Input field styling within the search bar */
-.input {
-  width: calc(100% - 20px); /* Adjusts for padding on either side */
-  margin: 0 10px; /* Centers input field within the search bar */
+  z-index: 1000;
 }
