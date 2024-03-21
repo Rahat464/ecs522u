@@ -649,3 +649,40 @@
   object-fit: cover;
   position: absolute;
 }
+
+#viewMore2 {
+  background-color: #3748de !important;
+  border-radius: 26px !important;
+}
+
+#viewMore2 .overlap-group-2 .rectangle {
+  left: 10000px !important;
+}
+
+#viewMore2 .overlap-group-2 .text-wrapper-5 {
+  font-size: 15px !important;
+  left: 0px !important;
+  top: -1px !important;
+  padding: 0px 10000px 0px 0px !important;
+  margin: 0px 1000px 0px -103px !important;
+  font-weight: 450 !important;
+}
+
+.home-map {
+  background-color: black
+}
+
+.map .overlap-group {
+  left: 0px !important;
+  top: 0px !important;
+}
+
+#home-div {
+  left: 0px !important;
+  top: 0px !important;
+}
+
+.search button {
+  bottom: 0px;
+  left: 243px;
+}

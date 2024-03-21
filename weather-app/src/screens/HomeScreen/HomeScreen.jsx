@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import {Link} from "react-router-dom";
 import "./style.css";
 import {fetchData} from "./index";
 
@@ -63,7 +64,7 @@ export const HomeScreen = () => {
               </div>
             </div>
             <div className="compass">
-              <div className="div">
+              <div className="div" id="home-div">
                 <img className="img" alt="Compass" src="/img/compass.png" />
                 <div className="text-wrapper-2">Compass</div>
               </div>
@@ -85,7 +86,10 @@ export const HomeScreen = () => {
               <div className="view-more-2">
                 <div className="overlap-group-2">
                   <div className="rectangle"/>
-                  <div className="text-wrapper-5">VIEW MORE</div>
+                  <Link to={{ pathname: "/viewmore/1/" +
+                    (forecast5Data && forecast5Data.city ? forecast5Data.city.name : "Dover")}}>
+                    <div className="text-wrapper-5">VIEW MORE</div>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -93,10 +97,13 @@ export const HomeScreen = () => {
               <img className="cloudy" alt="Cloudy"
                    src={forecast5Data ? iconUrl.replace("{icon}", forecast5Data.list[16].weather[0].icon) : ""}/>
               <div className="text-wrapper-4">{days[(today.getDay() + 2) % 7]}</div>
-              <div className="view-more">
+              <div className="view-more" id="viewMore2">
                 <div className="overlap-group-2">
                   <div className="rectangle"/>
-                  <div className="text-wrapper-5">VIEW MORE</div>
+                  <Link to={{ pathname: "/viewmore/2/" +
+                    (forecast5Data && forecast5Data.city ? forecast5Data.city.name : "Dover")}}>
+                    <div className="text-wrapper-5">VIEW MORE</div>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -107,7 +114,10 @@ export const HomeScreen = () => {
               <div className="overlap-group-wrapper">
                 <div className="overlap-group-2">
                   <div className="rectangle"/>
-                  <div className="text-wrapper-5">VIEW MORE</div>
+                  <Link to={{ pathname: "/viewmore/3/" +
+                        (forecast5Data && forecast5Data.city ? forecast5Data.city.name : "Dover")}}>
+                    <div className="text-wrapper-5">VIEW MORE</div>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -118,7 +128,10 @@ export const HomeScreen = () => {
               <div className="div-wrapper">
                 <div className="overlap-group-2">
                   <div className="rectangle"/>
-                  <div className="text-wrapper-5">VIEW MORE</div>
+                  <Link to={{ pathname: "/viewmore/4/" +
+                        (forecast5Data && forecast5Data.city ? forecast5Data.city.name : "Dover")}}>
+                    <div className="text-wrapper-5">VIEW MORE</div>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -127,14 +140,17 @@ export const HomeScreen = () => {
             <div className="view-more-3">
               <div className="overlap-group-2">
                 <div className="rectangle"/>
-                <div className="text-wrapper-5">VIEW MORE</div>
+                <Link to={{ pathname: "/viewmore/0/" +
+                      (forecast5Data && forecast5Data.city ? forecast5Data.city.name : "Dover")}}>
+                  <div className="text-wrapper-5">VIEW MORE</div>
+                </Link>
               </div>
             </div>
             <div className="title">
               <img className="storm-icon" alt="Storm icon"
                    src={forecast5Data ? iconUrl.replace("{icon}", forecast5Data.list[0].weather[0].icon) : ""}/>
               <div className="text-wrapper-18">
-                {forecast5Data ? forecast5Data.city.name : "City Name"}
+                {forecast5Data && forecast5Data.city ? forecast5Data.city.name : "City Name"}
               </div>
             </div>
             <div className="weather-info">
@@ -188,9 +204,9 @@ export const HomeScreen = () => {
             <div className="overlap-3">
               <img className="warning-icon" alt="Warning icon" src="/img/warning-icon.png"/>
               <p className="WARNING-heavy-rain">
-                {weatherbitData && weatherbitData.alerts.length > 0 ?
-                ("1 of " + (weatherbitData.alerts.length).toString() + ": " + weatherbitData.alerts[0].title) :
-                "No warnings"
+                {weatherbitData && weatherbitData.alerts && weatherbitData.alerts[0] ?
+                    ("1 of " + (weatherbitData.alerts.length).toString() + ": " + weatherbitData.alerts[0].title) :
+                    "No warnings"
                 }
               </p>
             </div>

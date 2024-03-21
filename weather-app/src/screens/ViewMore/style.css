@@ -225,7 +225,7 @@
   line-height: normal;
   position: absolute;
   text-align: center;
-  top: 0;
+  bottom: 27px;
   width: 276px;
 }
 
@@ -798,14 +798,14 @@
   width: 38px;
 }
 
-.view-more .rectangle {
+#rectangle1 {
   background-color: #e1c667;
   border-radius: 7px;
   height: 16px;
   left: 0;
   position: absolute;
   top: 1px;
-  width: 38px;
+  width: 41px;
 }
 
 .view-more .text-wrapper-25 {
@@ -930,4 +930,14 @@
   text-align: center;
   top: 3px;
   width: 276px;
+}
+
+.map .overlap-group {
+  left: 0px !important;
+  top: 0px !important;
+}
+
+#viewmore-div {
+  left: 0px !important;
+  top: 0px !important;
 }
