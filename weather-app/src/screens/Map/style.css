@@ -1,4 +1,11 @@
-/* Apply a universal box-sizing rule and reset default margins and paddings */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+/*Global*/
+* {
+  font-family: "Lexend", sans-serif;
+}
+
+
 *,
 *::before,
 *::after {
@@ -7,12 +14,12 @@
   padding: 0;
 }
 
-/* Set a consistent font across the app */
+/* Lexend font application */
 body {
   font-family: 'Lexend', sans-serif;
 }
 
-/* Define the main container for the map page */
+/* Map page styling */
 .map-page {
   background-color: white;
   display: flex;
@@ -26,27 +33,29 @@ body {
   overflow: hidden;
 }
 
-/* Set up the map container */
+/* Map container adjustment */
 .leaflet-map {
   width: 100%;
-  height: calc(100% - 78px); /* Height adjusted for navbar */
+  height: calc(100% - 65px); 
 }
 
-/* Style the navigation bar at the bottom of the map */
+/* Navbar positioning and styling */
 .navbar {
-  background-color: #fffcfc6e;
-  border-radius: 23px;
-  height: 78px;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+  background-color: #4422b557; 
+  border-top-left-radius: 30px; 
+  border-top-right-radius: 30px; 
+  height: 65px; 
+  position: absolute; 
+  bottom: 0; 
+  width: 100%; 
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 -4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* Style the navigation items */
+
+/* Navbar items layout */
 .navbar-item {
   display: flex;
   flex-direction: column;
@@ -54,31 +63,27 @@ body {
   text-decoration: none;
 }
 
-/* Style the icons in the navigation bar */
+/* Icon size standardization */
 .navbar-item .icon {
   height: 41px;
   width: 41px;
 }
 
-/* Style the labels under the icons */
+/* Label styling for readability */
 .navbar-item .label {
   font-size: 15px;
   font-weight: 300;
   margin-top: 4px;
+  color: black;
 }
 
-/* Highlight the active navigation item */
-.navbar-item.active .icon,
-.navbar-item.active .label {
-  color: #3748de;
-}
 
-/* Position the back button below the map's zoom controls */
+/* Back button positioning */
 .back-button-icon {
   height: 43px;
   width: 43px;
   position: absolute;
-  top: 80px; /* Adjusted to sit below zoom controls */
-  left: 10px;
+  top: 10px;
+  right: 10px;
   z-index: 1000;
 }
