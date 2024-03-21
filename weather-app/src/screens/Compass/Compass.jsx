@@ -82,29 +82,37 @@ export const Compass = () => {
     <div className="compass">
       <div className="overlap-wrapper">
         <div className="overlap">
-          <Link to={"/"} ><img className="background-image" alt="Background image" src="/img/background-image.png" /> </Link>
+          <img className="background-image" alt="Background image" src="/img/background-image.png" />
           <div className="navbar">
             <div className="map">
               <div className="overlap-group">
                 <div className="text-wrapper">Map</div>
-                <img className="map-icon" alt="Map icon" src="/img/map-icon.png" />
+                <Link to={"/map"}>
+                  <img className="map-icon" alt="Map icon" src="/img/map-icon.png"/>
+                </Link>
               </div>
             </div>
             <div className="div">
-              <div className="overlap-group-wrapper">
+            <div className="overlap-group-wrapper">
                 <div className="overlap-2">
-                  <img className="img" alt="Compass" src="/img/compass.png" />
+                  <Link to={"/compass"}>
+                    <img className="img" alt="Compass" src="/img/compass.png"/>
+                  </Link>
                   <div className="text-wrapper-2">Compass</div>
                 </div>
               </div>
               <div className="shade" />
             </div>
             <div className="home">
-              <img className="home-icon" alt="Home icon" src="/img/home-icon.png" />
+                <Link to={"/"}>
+                    <img className="home-icon" alt="Home icon" src="/img/home-icon.png"/>
+                </Link>
               <div className="text-wrapper-3">Home</div>
             </div>
           </div>
-          <Link to={"/"}><img className="back-button-icon" alt="Back button icon" src="/img/back-button-icon.png"/></Link>
+          <Link to={"/"}>
+            <img className="back-button-icon" alt="Back button icon" src="/img/back-button-icon.png"/>
+          </Link>
           <img
               className="image"
               alt="Compass Rose"
