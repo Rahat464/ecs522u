@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./style.css";
 
 export const Compass = () => {
@@ -27,7 +28,7 @@ export const Compass = () => {
   };
 
   const handleOrientation = (event) => {
-    console.log(event.alpha); // Log the alpha value to see if it changes
+    alert(event.alpha);
     setOrientation(event.alpha);
   };
   
@@ -54,34 +55,41 @@ export const Compass = () => {
 
   // Style to rotate the compass rose image according to the orientation
   const compassStyle = {
-    transform: `rotate(${orientation}deg)`,
+    transform: "translate(-50%, -50%) rotate(${orientation}deg)",
     transition: 'transform 0.1s linear' // Smooth transition for rotation
   };
+
   return (
     <div className="compass">
       <div className="overlap-wrapper">
         <div className="overlap">
           <img className="background-image" alt="Background image" src="/img/background-image.png" />
           <div className="navbar">
-            <div className="map">
-              <div className="overlap-group">
-                <div className="text-wrapper">Map</div>
-                <img className="map-icon" alt="Map icon" src="/img/map-icon.png" />
-              </div>
-            </div>
-            <div className="div">
-              <div className="overlap-group-wrapper">
-                <div className="overlap-2">
-                  <img className="img" alt="Compass" src="/img/compass.png" />
-                  <div className="text-wrapper-2">Compass</div>
+            <Link to="/map">
+              <div className="map">
+                <div className="overlap-group">
+                  <div className="text-wrapper">Map</div>
+                  <img className="map-icon" alt="Map icon" src="/img/map-icon.png" />
                 </div>
               </div>
-              <div className="shade" />
-            </div>
-            <div className="home">
-              <img className="home-icon" alt="Home icon" src="/img/home-icon.png" />
-              <div className="text-wrapper-3">Home</div>
-            </div>
+            </Link>
+            <Link to="/compass">
+              <div className="div">
+                <div className="overlap-group-wrapper">
+                  <div className="overlap-2">
+                    <img className="img" alt="Compass" src="/img/compass.png" />
+                    <div className="text-wrapper-2">Compass</div>
+                  </div>
+                </div>
+                <div className="shade" />
+              </div>
+            </Link>
+            <Link to="/">
+              <div className="home">
+                <img className="home-icon" alt="Home icon" src="/img/home-icon.png" />
+                <div className="text-wrapper-3">Home</div>
+              </div>
+            </Link>
           </div>
           <img className="back-button-icon" alt="Back button icon" src="/img/back-button-icon.png" />
           <img

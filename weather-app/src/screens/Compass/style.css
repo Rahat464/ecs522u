@@ -1,23 +1,21 @@
 .compass {
-  background-color: #ffffff;
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
+  width: 100%;
 }
 
 .compass .overlap-wrapper {
-  position: relative; /* Set relative for absolute positioning of children */
-  width: 100%; /* Full width of the parent */
-  max-width: 360px; /* Max width can be set as needed */
-  height: 100%; /* Full height of the parent */
+  background-color: #ffffff;
+  height: 800px;
+  overflow: hidden;
+  width: 360px;
 }
-
 
 .compass .overlap {
   height: 809px;
   position: relative;
 }
-
 
 .compass .background-image {
   height: 800px;
@@ -173,18 +171,10 @@
 }
 
 .compass .image {
-  max-width: 100%; /* Maximum width of 100% of its parent */
-  max-height: 100%; /* Maximum height of 100% of its parent */
-  object-fit: contain; /* Ensures the image is scaled to fit within its container */
-  position: absolute; /* Absolute positioning */
-  top: 50%; /* Aligns the top edge to the middle of its parent */
-  left: 50%; /* Aligns the left edge to the middle of its parent */
-  transform: translate(-50%, -50%); /* Centers the image */
-}
-
-/* Media Queries for responsiveness */
-@media (max-width: 768px) {
-  .compass .overlap-wrapper {
-    /* Adjust the size and layout for smaller screens */
-  }
+  height: 470px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 165px;
+  width: 360px;
 }

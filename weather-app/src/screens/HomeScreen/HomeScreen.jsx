@@ -55,29 +55,33 @@ export const HomeScreen = () => {
       <div className="overlap-wrapper">
         <div className="overlap">
           <img className="background-image" alt="Background image" src="/img/background-image.png" />
-          {/*Navbar Start*/}
           <div className="navbar">
-            <div className="map">
-              <div className="overlap-group">
-                <div className="text-wrapper">Map</div>
-                <img className="map-icon" alt="Map icon" src="/img/map-icon.png" />
+            <Link to="/map">
+              <div className="map">
+                <div className="overlap-group">
+                  <img className="map-icon" alt="Map icon" src="/img/map-icon.png" />
+                  <div className="text-wrapper">Map</div>
+                </div>
               </div>
-            </div>
-            <div className="compass">
-              <div className="div" id="home-div">
-                <img className="img" alt="Compass" src="/img/compass.png" />
-                <div className="text-wrapper-2">Compass</div>
+            </Link>
+            <Link to="/compass">
+              <div className="compass">
+                <div className="div">
+                  <img className="img" alt="Compass" src="/img/compass.png" />
+                  <div className="text-wrapper-2">Compass</div>
+                </div>
               </div>
-            </div>
-            <div className="overlap-2">
-              <div className="home">
-                <img className="home-icon" alt="Home icon" src="/img/home-icon.png" />
-                <div className="text-wrapper-3">Home</div>
+            </Link>
+            <Link to="/">
+              <div className="overlap-2">
+                <div className="home">
+                  <img className="home-icon" alt="Home icon" src="/img/home-icon.png" />
+                  <div className="text-wrapper-3">Home</div>
+                </div>
+                <div className="shade" />
               </div>
-              <div className="shade" />
-            </div>
+            </Link>
           </div>
-          {/*Navbar End*/}
           <div className="more-forecasts">
             <div className="day-1"> {/*Tomorrow*/}
               <img className="cloudy" alt="Cloudy"
