@@ -171,10 +171,11 @@
 }
 
 .compass .image {
-  height: 470px;
-  left: 0;
-  object-fit: cover;
+  max-width: 100%; /* Maximum width of 100% of its parent */
+  max-height: 100%;
+  object-fit: contain;
   position: absolute;
-  top: 165px;
-  width: 360px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

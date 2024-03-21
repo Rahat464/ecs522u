@@ -73,7 +73,7 @@
   height: 41px;
   left: 12px;
   object-fit: cover;
-  /*position: absolute;*/
+  position: absolute;
   top: 0;
   width: 40px;
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 import "./style.css";
 
 export const Compass = () => {
@@ -7,6 +7,7 @@ export const Compass = () => {
   const [orientation, setOrientation] = useState(null);
   const [error, setError] = useState(null);
 
+  // Get the user's current position
   const getPosition = (position) => {
     setPosition({
       latitude: position.coords.latitude,
@@ -14,7 +15,10 @@ export const Compass = () => {
     });
   };
 
+
+  // Handle errors when getting the user's position
   const handleError = (error) => {
+    console.log('Geolocation error code:', error.code);
     // Permission denied
     if (error.code === 1) {
       setError("User denied the request for Geolocation.");
@@ -27,13 +31,28 @@ export const Compass = () => {
     }
   };
 
+
+  // Check the Geolocation permission status
+  navigator.permissions.query({ name: 'geolocation' })
+    .then((permissionStatus) => {
+      console.log('Geolocation permission state is ', permissionStatus.state);
+
+
+      // Listen for changes to the permission state
+      permissionStatus.onchange = () => {
+        console.log('Geolocation permission state has changed to ', permissionStatus.state);
+      };
+    });
+
+  // Handle device orientation changes
   const handleOrientation = (event) => {
-    alert(event.alpha);
     setOrientation(event.alpha);
   };
   
-
+  // Get the user's current position and listen for device orientation changes
   useEffect(() => {
+
+    // Error checking: Check for support for Geolocation API
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(getPosition, handleError);
     } else {
@@ -63,39 +82,33 @@ export const Compass = () => {
     <div className="compass">
       <div className="overlap-wrapper">
         <div className="overlap">
-          <img className="background-image" alt="Background image" src="/img/background-image.png" />
+          <Link to={"/"} ><img className="background-image" alt="Background image" src="/img/background-image.png" /> </Link>
           <div className="navbar">
-            <Link to="/map">
-              <div className="map">
-                <div className="overlap-group">
-                  <div className="text-wrapper">Map</div>
-                  <img className="map-icon" alt="Map icon" src="/img/map-icon.png" />
+            <div className="map">
+              <div className="overlap-group">
+                <div className="text-wrapper">Map</div>
+                <img className="map-icon" alt="Map icon" src="/img/map-icon.png" />
+              </div>
+            </div>
+            <div className="div">
+              <div className="overlap-group-wrapper">
+                <div className="overlap-2">
+                  <img className="img" alt="Compass" src="/img/compass.png" />
+                  <div className="text-wrapper-2">Compass</div>
                 </div>
               </div>
-            </Link>
-            <Link to="/compass">
-              <div className="div">
-                <div className="overlap-group-wrapper">
-                  <div className="overlap-2">
-                    <img className="img" alt="Compass" src="/img/compass.png" />
-                    <div className="text-wrapper-2">Compass</div>
-                  </div>
-                </div>
-                <div className="shade" />
-              </div>
-            </Link>
-            <Link to="/">
-              <div className="home">
-                <img className="home-icon" alt="Home icon" src="/img/home-icon.png" />
-                <div className="text-wrapper-3">Home</div>
-              </div>
-            </Link>
+              <div className="shade" />
+            </div>
+            <div className="home">
+              <img className="home-icon" alt="Home icon" src="/img/home-icon.png" />
+              <div className="text-wrapper-3">Home</div>
+            </div>
           </div>
-          <img className="back-button-icon" alt="Back button icon" src="/img/back-button-icon.png" />
+          <Link to={"/"}><img className="back-button-icon" alt="Back button icon" src="/img/back-button-icon.png"/></Link>
           <img
-            className="image"
-            alt="Compass Rose"
-            src="/img/compassrose.png"
+              className="image"
+              alt="Compass Rose"
+              src="/img/compassrose.png"
             style={orientation !== null ? compassStyle : {}}
           />
         </div>
