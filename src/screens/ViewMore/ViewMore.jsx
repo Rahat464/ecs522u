@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {Link, useParams} from "react-router-dom";
 import "./style.css";
 
-import {fetchData} from "../HomeScreen/index";
+import {fetchData} from "../HomeScreen";
 
 export const ViewMore = () => {
   // State variable to store the fetched data

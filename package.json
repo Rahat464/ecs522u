@@ -19,7 +19,7 @@
     "start": "react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build": "parcel build --public-url ./ --no-scope-hoist",
+    "build": "parcel build --public-url weather-app --no-scope-hoist",
     "dev": "parcel",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
