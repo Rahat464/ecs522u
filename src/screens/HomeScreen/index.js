@@ -1,9 +1,10 @@
 export const fetchData = async (userInput) => {
     // Constants
     const API_KEY = {
-        "openweathermap": "74ee18ca0b3d0db25a9331a5899b0a85",
-        "weatherbit": "af697910398e456a84fa8a5943ba6a7f"
-    }
+        "openweathermap": "your_openweathermap_api_key",
+        "weatherbit": "your_weatherbit_api_key"
+    };
+
     const WEATHER_API_URL = ('https://api.openweathermap.org/data/2.5/forecast?lat={1}&lon={2}&units=metric&appid=' +
         API_KEY["openweathermap"]);
     const GEOCODING_API_URL = ('https://api.openweathermap.org/geo/1.0/direct?q={1}&limit=1&appid=' +
